@@ -1,28 +1,26 @@
-*{margin:0;padding:0;box-sizing:border-box;}
-
 body{
   font-family:'Poppins',sans-serif;
   background:#0f0f0f;
   color:white;
+  display:flex;
+  justify-content:center;
   padding:20px;
 }
 
 .container{
-  max-width:700px;
-  margin:auto;
+  width:100%;
+  max-width:550px;
   background:#1a1a1a;
   padding:25px;
   border-radius:25px;
 }
 
-h1{text-align:center;margin-bottom:20px;}
+h1{text-align:center;}
 
-label{font-size:13px;}
-
-input, select{
+input,select{
   width:100%;
   padding:10px;
-  margin-top:5px;
+  margin-bottom:10px;
   border-radius:10px;
   border:none;
   background:#2a2a2a;
@@ -46,18 +44,71 @@ button{
 }
 
 .add-btn{background:#333;}
-.delete-btn{background:red;}
 .pay-btn{background:linear-gradient(45deg,#ff9800,#ff4d6d);}
-
-.total-box{
-  margin-top:20px;
-  background:#252525;
-  padding:15px;
-  border-radius:15px;
-}
+.delete-btn{background:red;}
 
 .total{
   font-size:20px;
-  color:#ff9d00;
+  color:#ff9800;
   font-weight:bold;
+}
+
+/* CONTAINER TOPPING */
+.topping{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+/* LABEL */
+.topping label{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #2a2a2a;
+  padding: 8px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: 0.2s;
+}
+
+/* HOVER */
+.topping label:hover{
+  background: #333;
+}
+
+/* CHECKBOX */
+.topping input[type="checkbox"]{
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 6px;
+  background: #111;
+  border: 2px solid #555;
+  cursor: pointer;
+  position: relative;
+}
+
+/* SAAT DICENTANG */
+.topping input[type="checkbox"]:checked{
+  background: #ff9800;
+  border: none;
+}
+
+/* ICON CEKLIS */
+.topping input[type="checkbox"]:checked::after{
+  content: "✔";
+  color: black;
+  font-size: 12px;
+  position: absolute;
+  top: 0;
+  left: 3px;
+}
+
+/* LABEL AKTIF */
+.topping input[type="checkbox"]:checked + span{
+  font-weight: 600;
+  color: #ff9800;
 }
