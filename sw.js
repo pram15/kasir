@@ -1,10 +1,10 @@
 const CACHE_NAME = "kasir-pwa-v1";
 
 const urlsToCache = [
-  "/kasi/",
-  "/kasi/index.html",
-  "/kasi/kasir.html",
-  "/kasi/foto/logogram png.png"
+  "/kasir/",
+  "/kasir/index.html",
+  "/kasir/kasir.html",
+  "/kasir/foto/logogram.png"
 ];
 
 self.addEventListener("install", e => {
